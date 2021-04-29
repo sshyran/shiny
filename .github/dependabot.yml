@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "03:00"
+  open-pull-requests-limit: 10
+  target-branch: dev
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: Xamarin.AndroidX.Lifecycle.Runtime
+    versions:
+    - 2.3.1
+  - dependency-name: ReactiveUI.Fody
+    versions:
+    - 13.2.10
